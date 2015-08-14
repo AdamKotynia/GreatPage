@@ -5,48 +5,48 @@
     <title>GreatPage</title>
     <link type="text/css" rel="stylesheet" href="styles/main.css" />
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+    <script>
+        $(window).ready(function() {
+            $(".inner_content a").click(function(e) {
+                e.preventDefault();
+                $(".content1").load($(this).attr('href'));
+            });
+
+        });
+    </script>
 </head>
 <body>
-    <div class="navibar"></div>
-    <script type="text/javascript">
-        $(function()
-        {
-            $(".navibar").load("base.html .navbar");
-        });
-    </script>
-
     <div class="hero">
         <img src="images/hero.jpg" alt="Hero"/>
-        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda atque blanditiis consectetur, consequuntur deleniti dicta doloribus ea exercitationem facilis fugiat in molestias neque odit pariatur perspiciatis praesentium qui sint?</p>-->
+        <p>Lorem ipsum dolor sit amet</p>
     </div>
     <div class="content">
+        <h1>Categories</h1>
         <div class="inner_content">
-            <a href="category.html"><img src="images/content.jpg" alt=""/></a>
+            <a href="category.html"><img src="images/content.jpg" alt=""/>
+                <p>Lorem</p></a>
         </div>
         <div class="inner_content">
-            <a href="category.html"><img src="images/content.jpg" alt=""/></a>
+            <a href="category.html"><img src="images/content.jpg" alt=""/>
+                <p>Lorem</p></a>
         </div>
         <div class="inner_content">
-            <a href="category.html"><img src="images/content.jpg" alt=""/></a>
+            <a href="category.html"><img src="images/content.jpg" alt=""/>
+                <p>Lorem</p></a>
         </div>
         <div class="inner_content">
-            <a href="category.html"><img src="images/content.jpg" alt=""/></a>
+            <a href="category.html"><img src="images/content.jpg" alt=""/>
+                <p>Lorem</p></a>
         </div>
         <div class="inner_content">
-            <a href="category.html"><img src="images/content.jpg" alt=""/></a>
+            <a href="category.html"><img src="images/content.jpg" alt=""/>
+                <p>Lorem</p></a>
         </div>
         <div class="inner_content">
-            <a href="category.html"><img src="images/content.jpg" alt=""/></a>
+            <a href="category.html"><img src="images/content.jpg" alt=""/>
+                <p>Lorem</p></a>
         </div>
     </div>
-    <div class="footy"></div>
-    <script type="text/javascript">
-        $(function()
-        {
-            $(".footy").load("base.html .footer");
-        });
-    </script>
-
-
 </body>
 </html>

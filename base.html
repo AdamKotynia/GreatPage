@@ -2,14 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <link type="text/css" rel="stylesheet" href="styles/main.css" />
     <title></title>
+    <script>
+        $(window).ready(function() {
+            $("#trigger").click(function () {
+                $(".content1").load("index.html");
+            })
+            $("#trigger1").click(function () {
+                $(".content1").load("category.html");
+            })
+            $("#trigger2").click(function () {
+                $(".content1").load("product.html");
+            })
+        });
+    </script>
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.html">Main Menu</a>
-    </div>
+    <nav class="navbar">
 
+        <button id="trigger">Main Page</button>
+        <button id="trigger1">Category Page</button>
+        <button id="trigger2">Product View</button>
+
+    </nav>
+    <div class="content1"></div>
+    <script type="text/javascript">
+        $(function()
+        {
+            $(".content1").load("index.html");
+        });
+    </script>
     <div class="footer">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deserunt dolor est, placeat quos reiciendis tempore! Adipisci aliquid atque beatae dolor eaque excepturi facere fugiat perferendis? Cupiditate non officiis perspiciatis.

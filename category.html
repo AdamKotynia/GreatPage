@@ -5,17 +5,35 @@
     <title>Category - GreatPage</title>
     <link type="text/css" rel="stylesheet" href="styles/main.css" />
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-</head>
-<body>
-    <div class="navibar"></div>
-    <script type="text/javascript">
-        $(function()
-        {
-            $(".navibar").load("base.html .navbar");
+    <script>
+        $(window).ready(function() {
+            $(".product a").click(function(e) {
+                e.preventDefault();
+                $(".content1").load($(this).attr('href'));
+            });
+            $(".category a").click(function(e) {
+                e.preventDefault();
+                console.log($(this).attr('href'))
+                $(".content1").load($(this).attr('href'));
+                console.log("2")
+            });
         });
     </script>
-    <div class="category"></div>
+</head>
+<body>
+    <div class="category">
+        <h1>Categories</h1><br>
+        <ul>
+            <li><a href="category.html">Lorem</a></li>
+            <li><a href="category.html">Lorem</a></li>
+            <li><a href="category.html">Lorem</a></li>
+            <li><a href="category.html">Lorem</a></li>
+            <li><a href="category.html">Lorem</a></li>
+            <li><a href="category.html">Lorem</a></li>
+        </ul>
+    </div>
     <div class="product_container">
+        <h1>Products</h1>
         <div class="product">
             <a href="product.html"><img src="images/content.jpg" alt=""/></a>
         </div>
@@ -36,12 +54,5 @@
         </div>
     </div>
     <div class="footy"></div>
-    <script type="text/javascript">
-        $(function()
-        {
-            $(".footy").load("base.html .footer");
-        });
-    </script>
-
 </body>
 </html>
