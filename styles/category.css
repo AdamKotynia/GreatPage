@@ -1,0 +1,21 @@
+.category {
+  width: 25%;
+  height: 300px;
+  float: left;
+  margin-left: 5%;
+}
+.product_container {
+  max-width: 60%;
+  float: right;
+  padding: 5% 5% 5% 5%;
+  text-align: center;
+}
+.product {
+  display: inline-block;
+  width: 40%;
+  margin: 1% 1% 1% 1%;
+}
+.product img {
+  height: 100%;
+  width: 100%;
+}

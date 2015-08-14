@@ -2,42 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Godlike Bicycles</title>
+    <title>GreatPage</title>
     <link type="text/css" rel="stylesheet" href="styles/main.css" />
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.html">Main Menu</a>
-    </div>
+    <div class="navibar"></div>
+    <script type="text/javascript">
+        $(function()
+        {
+            $(".navibar").load("base.html .navbar");
+        });
+    </script>
+
     <div class="hero">
         <img src="images/hero.jpg" alt="Hero"/>
         <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda atque blanditiis consectetur, consequuntur deleniti dicta doloribus ea exercitationem facilis fugiat in molestias neque odit pariatur perspiciatis praesentium qui sint?</p>-->
     </div>
     <div class="content">
         <div class="inner_content">
-            <a href="product.html"><img src="images/content.jpg" alt=""/></a>
+            <a href="category.html"><img src="images/content.jpg" alt=""/></a>
         </div>
         <div class="inner_content">
-            <a href="product.html"><img src="images/content.jpg" alt=""/></a>
+            <a href="category.html"><img src="images/content.jpg" alt=""/></a>
         </div>
         <div class="inner_content">
-            <a href="product.html"><img src="images/content.jpg" alt=""/></a>
+            <a href="category.html"><img src="images/content.jpg" alt=""/></a>
         </div>
         <div class="inner_content">
-            <a href="product.html"><img src="images/content.jpg" alt=""/></a>
+            <a href="category.html"><img src="images/content.jpg" alt=""/></a>
         </div>
         <div class="inner_content">
-            <a href="product.html"><img src="images/content.jpg" alt=""/></a>
+            <a href="category.html"><img src="images/content.jpg" alt=""/></a>
         </div>
         <div class="inner_content">
-            <a href="product.html"><img src="images/content.jpg" alt=""/></a>
+            <a href="category.html"><img src="images/content.jpg" alt=""/></a>
         </div>
     </div>
-    <div class="footer">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deserunt dolor est, placeat quos reiciendis tempore! Adipisci aliquid atque beatae dolor eaque excepturi facere fugiat perferendis? Cupiditate non officiis perspiciatis.
-        </p>
-    </div>
+    <div class="footy"></div>
+    <script type="text/javascript">
+        $(function()
+        {
+            $(".footy").load("base.html .footer");
+        });
+    </script>
+
 
 </body>
 </html>
