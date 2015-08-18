@@ -1,34 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Product - GreatPage</title>
-    <link type="text/css" rel="stylesheet" href="styles/main.css" />
-    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-</head>
-<body>
+
+<script>
+    $(window).ready(function() {
+        $(".small_photo").click(function () {
+                console.log(this)
+                $("#large_photo_image").attr("src", "images/content1.jpg");
+            })
+//        $(".small_photo1").click(function () {
+//
+//            var foo = $(this).children('img')
+//            var bar = $(".large_photo").children('img')
+//            bar.attr("src", foo);
+//            console.log($(this).children('img'))
+//        })
+    });
+</script>
     <div class="main_container">
         <div class="large_photo">
-            <img src="images/content.jpg" alt=""/>
+            <img id="large_photo_image" src="images/content.jpg" alt=""/>
         </div>
-        <div class="small_photo">
-            <img src="images/content.jpg" alt=""/>
-        </div>
-        <div class="small_photo">
-            <img src="images/content.jpg" alt=""/>
-        </div>
-        <div class="small_photo">
-            <img src="images/content.jpg" alt=""/>
-        </div>
-        <div class="small_photo">
-            <img src="images/content.jpg" alt=""/>
-        </div>
-        <div class="small_photo">
-            <img src="images/content.jpg" alt=""/>
-        </div>
-        <div class="small_photo">
-            <img src="images/content.jpg" alt=""/>
-        </div>
+        <ul class="small_photo">
+            <li><img src="images/content.jpg" alt=""/></li>
+            <li><img src="images/content.jpg" alt=""/></li>
+            <li><img src="images/content.jpg" alt=""/></li>
+            <li><img src="images/content.jpg" alt=""/></li>
+            <li><img src="images/content.jpg" alt=""/></li>
+            <li><img src="images/content.jpg" alt=""/></li>
+
+
+        </ul>
+        <!--<div class="small_photo1">-->
+            <!--<img src="images/content1.jpg" alt=""/>-->
+        <!--</div>-->
+        <!--<div class="small_photo">-->
+            <!--<img src="images/content.jpg" alt=""/>-->
+        <!--</div>-->
+        <!--<div class="small_photo">-->
+            <!--<img src="images/content.jpg" alt=""/>-->
+        <!--</div>-->
+        <!--<div class="small_photo">-->
+            <!--<img src="images/content.jpg" alt=""/>-->
+        <!--</div>-->
+        <!--<div class="small_photo">-->
+            <!--<img class="small_photo">src="images/content.jpg" alt=""/>-->
+        <!--</div>-->
+        <!--<div class="small_photo">-->
+            <!--<img src="images/content.jpg" alt=""/>-->
+        <!--</div>-->
     </div>
     <div class="description">
         <h1>Product Name</h1>
@@ -51,5 +68,3 @@
             <img src="images/content.jpg" alt=""/>
         </div>
     </div>
-</body>
-</html>

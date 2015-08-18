@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Category - GreatPage</title>
-    <link type="text/css" rel="stylesheet" href="styles/main.css" />
-    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-    <script>
-        $(window).ready(function() {
-            $(".product a").click(function(e) {
-                e.preventDefault();
-                $(".content1").load($(this).attr('href'));
-            });
-            $(".category a").click(function(e) {
-                e.preventDefault();
-                console.log($(this).attr('href'))
-                $(".content1").load($(this).attr('href'));
-                console.log("2")
-            });
+<script>
+    $(window).ready(function() {
+        $(".product a").click(function(e) {
+            e.preventDefault();
+            $(".content1").load($(this).attr('href'));
         });
-    </script>
-</head>
-<body>
+        $(".category a").click(function(e) {
+            e.preventDefault();
+            $(".content1").load($(this).attr('href'));
+        });
+    });
+</script>
     <div class="category">
         <h1>Categories</h1><br>
         <ul>
@@ -34,25 +23,31 @@
     </div>
     <div class="product_container">
         <h1>Products</h1>
-        <div class="product">
-            <a href="product.html"><img src="images/content.jpg" alt=""/></a>
-        </div>
-        <div class="product">
-            <a href="product.html"><img src="images/content.jpg" alt=""/></a>
-        </div>
-        <div class="product">
-            <a href="product.html"><img src="images/content.jpg" alt=""/></a>
-        </div>
-        <div class="product">
-            <a href="product.html"><img src="images/content.jpg" alt=""/></a>
-        </div>
-        <div class="product">
-            <a href="product.html"><img src="images/content.jpg" alt=""/></a>
-        </div>
-        <div class="product">
-            <a href="product.html"><img src="images/content.jpg" alt=""/></a>
-        </div>
+        <ul class="product">
+            <li><a href="product.html"><img src="images/content.jpg" alt=""/></a></li>
+            <li class="product"><a href="product.html"><img src="images/content.jpg" alt=""/></a></li>
+            <li class="product"><a href="product.html"><img src="images/content.jpg" alt=""/></a></li>
+            <li class="product"><a href="product.html"><img src="images/content.jpg" alt=""/></a></li>
+            <li class="product"><a href="product.html"><img src="images/content.jpg" alt=""/></a></li>
+            <li class="product"><a href="product.html"><img src="images/content.jpg" alt=""/></a></li>
+        </ul>
+        <!--<div class="product">-->
+            <!--<a href="product.html"><img src="images/content.jpg" alt=""/></a>-->
+        <!--</div>-->
+        <!--<div class="product">-->
+            <!--<a href="product.html"><img src="images/content.jpg" alt=""/></a>-->
+        <!--</div>-->
+        <!--<div class="product">-->
+            <!--<a href="product.html"><img src="images/content.jpg" alt=""/></a>-->
+        <!--</div>-->
+        <!--<div class="product">-->
+            <!--<a href="product.html"><img src="images/content.jpg" alt=""/></a>-->
+        <!--</div>-->
+        <!--<div class="product">-->
+            <!--<a href="product.html"><img src="images/content.jpg" alt=""/></a>-->
+        <!--</div>-->
+        <!--<div class="product">-->
+            <!--<a href="product.html"><img src="images/content.jpg" alt=""/></a>-->
+        <!--</div>-->
     </div>
     <div class="footy"></div>
-</body>
-</html>

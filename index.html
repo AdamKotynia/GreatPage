@@ -1,24 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>GreatPage</title>
-    <link type="text/css" rel="stylesheet" href="styles/main.css" />
-    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-
-    <script>
-        $(window).ready(function() {
-            $(".inner_content a").click(function(e) {
-                e.preventDefault();
-                $(".content1").load($(this).attr('href'));
-            });
-
+<script>
+    $(window).ready(function() {
+        $(".inner_content a").click(function(e) {
+            e.preventDefault();
+            $(".content1").load($(this).attr('href'));
         });
-    </script>
-</head>
-<body>
+
+    });
+</script>
     <div class="hero">
-        <img src="images/hero.jpg" alt="Hero"/>
+        <!--<img src="images/hero.jpg" alt="Hero"/>-->
         <p>Lorem ipsum dolor sit amet</p>
     </div>
     <div class="content">
@@ -48,5 +38,3 @@
                 <p>Lorem</p></a>
         </div>
     </div>
-</body>
-</html>
