@@ -14,43 +14,27 @@
 //        })
     });
 </script>
-    <div class="main_container">
-        <div class="large_photo">
-            <img id="large_photo_image" src="images/content.jpg" alt=""/>
+    <div class="super_container">
+        <div class="main_container">
+            <div class="large_photo">
+                <img id="large_photo_image" src="images/content.jpg" alt=""/>
+            </div>
+            <ul class="small_photo">
+                <li><img src="images/content.jpg" alt=""/></li>
+                <li><img src="images/content.jpg" alt=""/></li>
+                <li><img src="images/content.jpg" alt=""/></li>
+                <li><img src="images/content.jpg" alt=""/></li>
+                <li><img src="images/content.jpg" alt=""/></li>
+                <li><img src="images/content.jpg" alt=""/></li>
+
+
+            </ul>
         </div>
-        <ul class="small_photo">
-            <li><img src="images/content.jpg" alt=""/></li>
-            <li><img src="images/content.jpg" alt=""/></li>
-            <li><img src="images/content.jpg" alt=""/></li>
-            <li><img src="images/content.jpg" alt=""/></li>
-            <li><img src="images/content.jpg" alt=""/></li>
-            <li><img src="images/content.jpg" alt=""/></li>
-
-
-        </ul>
-        <!--<div class="small_photo1">-->
-            <!--<img src="images/content1.jpg" alt=""/>-->
-        <!--</div>-->
-        <!--<div class="small_photo">-->
-            <!--<img src="images/content.jpg" alt=""/>-->
-        <!--</div>-->
-        <!--<div class="small_photo">-->
-            <!--<img src="images/content.jpg" alt=""/>-->
-        <!--</div>-->
-        <!--<div class="small_photo">-->
-            <!--<img src="images/content.jpg" alt=""/>-->
-        <!--</div>-->
-        <!--<div class="small_photo">-->
-            <!--<img class="small_photo">src="images/content.jpg" alt=""/>-->
-        <!--</div>-->
-        <!--<div class="small_photo">-->
-            <!--<img src="images/content.jpg" alt=""/>-->
-        <!--</div>-->
-    </div>
-    <div class="description">
-        <h1>Product Name</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cupiditate natus, omnis pariatur rem sit tempora temporibus. Ab accusantium alias ducimus eaque expedita iure, nobis quidem quis quisquam ratione, ullam.</p>
-        <div class="button">Buy now</div>
+        <div class="description">
+            <h1>Product Name</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cupiditate natus, omnis pariatur rem sit tempora temporibus. Ab accusantium alias ducimus eaque expedita iure, nobis quidem quis quisquam ratione, ullam.</p>
+            <div class="button">Buy now</div>
+        </div>
     </div>
 
     <div class="suggest">
@@ -68,3 +52,24 @@
             <img src="images/content.jpg" alt=""/>
         </div>
     </div>
+    <button class="btn" onclick="visible('promo_container');">PROMOTION @!!@!@!@@!@!@</button>
+    <div id="promo_container" onclick="invisible('promo_container');">
+        <div class="promo" onclick="event.stopPropagation();">
+            <div class="x" onclick="invisible('promo_container');">
+                <p id="x">x</p>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+
+    function visible(foo) {
+        var e = document.getElementById(foo);
+        e.style.display = 'block';
+    }
+
+    function invisible(name) {
+        var e = document.getElementById(name);
+        e.style.display = 'none';
+
+    }
+</script>

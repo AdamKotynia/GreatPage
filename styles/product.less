@@ -1,10 +1,14 @@
+.super_container {
+  background-color: #D3D3D3;
+}
+
 .main_container {
   max-width: 30%;
-  float: left;
+  //float: left;
   text-align: center;
-  border: 2px solid grey;
+  //border: 2px solid grey;
   margin-bottom: 50px;
-  background-color: #D3D3D3;
+  display: inline-block;
 }
 
 .large_photo {
@@ -61,11 +65,13 @@
 
 .description {
   width: 60%;
-  overflow:hidden;
+  display: inline-block;
+  //overflow:hidden;
   text-align: center;
-  background-color: #D3D3D3;
-  border: 2px solid grey;
-  border-left: 0;
+  //background-color: #D3D3D3;
+  //border: 2px solid grey;
+  //border-left: 0;
+  vertical-align: top;
 }
 
 .button {
@@ -98,4 +104,83 @@
     margin: 0 0 0 0;
     width: 40%
   }
+}
+
+@keyframes pulse
+{
+  0% {background-color: black;}
+  25% {background-color: blue;}
+  50% {background-color: green;}
+  75% {background-color: yellow;}
+  100% {background-color: pink;}
+}
+
+.btn {
+  background: #b834d9;
+  //background-image: -webkit-linear-gradient(top, #b834d9, #352cb8);
+  //background-image: -moz-linear-gradient(top, #b834d9, #352cb8);
+  //background-image: -ms-linear-gradient(top, #b834d9, #352cb8);
+  //background-image: -o-linear-gradient(top, #b834d9, #352cb8);
+  //background-image: linear-gradient(to bottom, #b834d9, #352cb8);
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width: 100%;
+  //animation: pulse 0.2s infinite;
+}
+
+.btn:hover {
+  //background: #3cb0fd;
+  //background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  //background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  //background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  //background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  //background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+@keyframes slide {
+  0% {transform: translateX(-1500px);}
+  100% {transform: translateX(0);}
+}
+
+#promo_container {
+  width: 100%;
+  height: 1500px;
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  animation: slide 1s;
+}
+
+.promo {
+  width: 35%;
+  height: 350px;
+  background-color: white;
+  //position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  border: 2px solid black;
+
+}
+
+.x {
+  width: 10%;
+  height: 10%;
+  border: 2px solid red;
+  margin-left: auto;
+  text-align: center;
+  &:hover {
+    background-color: red;
+  }
+}
+
+#x {
+  width: 100%;
+  //height: 100%;
 }
