@@ -1,0 +1,10 @@
+<nav class="navbar">
+    <div class="inav" ng-repeat="el in nav.el">
+        <a href="{{el.link}}">
+            <button id="trigger">{{el.name}}
+                <span ng-show="el.link == '#/cart' && count != 0">({{count}})</span>
+            </button>
+
+        </a>
+    </div>
+</nav>

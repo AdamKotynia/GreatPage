@@ -1,0 +1,20 @@
+<div class="super_container">
+    <div class="main_container">
+        <div class="large_photo">
+            <img id="large_photo_image" src="{{image}}" alt=""/>
+        </div>
+        <ul class="small_photo">
+            <li ng-repeat="product in prom.category"><img src="{{image}}" alt=""/></li>
+        </ul>
+    </div>
+    <div class="description">
+        <h1>{{name}}</h1>
+        <p>{{description}}</p>
+        <button type="button" class="btn btn-default btn-lg" ng-show="!isLoggedIn()">
+            <span ng-click="addToCart(id)">
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add to cart
+            </span>
+        </button>
+        <h2 ng-show="isLoggedIn()">You have to login in order to purchase.</h2>
+    </div>
+</div>

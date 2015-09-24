@@ -1,0 +1,21 @@
+<div>
+    <section class="logbar" ng-show="isLoggedIn()">
+        <div id="panel">
+            <form>
+                <label for="username">User name:</label>
+                <input type="text" id="username" name="username" ng-model="username">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" ng-model="password">
+                <div id="lower">
+                    <input type="checkbox"><label class="check">Remember me!</label>
+                    <input type="submit" value="Login" ng-click="submit()">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="logbar" ng-show="!isLoggedIn()">
+        <h1>{{uName}}</h1>
+        <button type="submit" ng-click="logout()">Logout</button>
+    </section>
+</div>

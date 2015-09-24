@@ -5,7 +5,11 @@
   max-width: 30%;
   text-align: center;
   margin-bottom: 50px;
+  margin-top: 2%;
   display: inline-block;
+}
+.main_container li {
+  margin: 0 2% 0 2%;
 }
 .large_photo {
   max-width: 60%;
@@ -36,8 +40,8 @@
   list-style-type: none;
   display: inline-block;
   text-align: center;
-  width: 110px;
-  height: 110px;
+  width: 30%;
+  height: 30%;
 }
 @media only screen and (min-width: 431px) and (max-width: 800px) {
   .small_photo li {
@@ -111,7 +115,7 @@
     background-color: pink;
   }
 }
-.btn {
+.butn {
   background: #b834d9;
   font-family: Arial;
   color: #ffffff;
@@ -120,7 +124,7 @@
   text-decoration: none;
   width: 100%;
 }
-.btn:hover {
+.butn:hover {
   text-decoration: none;
 }
 @keyframes slide {
@@ -133,11 +137,12 @@
 }
 #promo_container {
   width: 100%;
-  height: 1500px;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   display: none;
   animation: slide 1s;
 }
@@ -162,4 +167,6 @@
 }
 #x {
   width: 100%;
+  padding: 0;
+  margin: 0;
 }

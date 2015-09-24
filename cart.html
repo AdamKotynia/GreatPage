@@ -1,0 +1,20 @@
+<categories></categories>
+<div class="product-cart">
+    <h2>Products currently in cart</h2>
+    <div class="cart-view">
+        <ul>
+            <li ng-repeat="product in products" ng-show="product.quantity != 0" >
+                {{product.name}} : {{product.quantity}} - {{product.price | currency}} each
+                <button ng-click="addToCart(product.id)">Add</button>
+                <button ng-click="removeFromCart(product.id)">Remove</button>
+            </li>
+        </ul>
+        <h3>Sum {{total | currency}}</h3>
+
+    </div>
+    <button type="button" class="btn btn-default btn-lg">
+        <a href="#/form">
+            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Order now
+        </a>
+    </button>
+</div>

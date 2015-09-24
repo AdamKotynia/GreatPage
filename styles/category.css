@@ -37,7 +37,7 @@
 }
 .product li {
   padding-left: 0;
-  margin-left: 0;
+  margin: 0 2% 0 2%;
   list-style-type: none;
   display: inline-block;
   text-align: center;

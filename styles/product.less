@@ -8,7 +8,11 @@
   text-align: center;
   //border: 2px solid grey;
   margin-bottom: 50px;
+  margin-top: 2%;
   display: inline-block;
+  li {
+    margin: 0 2% 0 2%;
+  }
 }
 
 .large_photo {
@@ -43,8 +47,8 @@
     list-style-type: none;
     display: inline-block;
     text-align: center;
-    width: 110px;
-    height: 110px;
+    width: 30%;
+    height: 30%;
     @media only screen and (min-width: 431px) and (max-width: 800px) {
       width: 55px;
       height: 55px;
@@ -115,7 +119,7 @@
   100% {background-color: pink;}
 }
 
-.btn {
+.butn {
   background: #b834d9;
   //background-image: -webkit-linear-gradient(top, #b834d9, #352cb8);
   //background-image: -moz-linear-gradient(top, #b834d9, #352cb8);
@@ -131,7 +135,7 @@
   //animation: pulse 0.2s infinite;
 }
 
-.btn:hover {
+.butn:hover {
   //background: #3cb0fd;
   //background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
   //background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
@@ -148,11 +152,13 @@
 
 #promo_container {
   width: 100%;
-  height: 1500px;
+  //height: 1500px;
   background-color: rgba(0,0,0,0.5);
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   display: none;
   animation: slide 1s;
 }
@@ -183,4 +189,6 @@
 #x {
   width: 100%;
   //height: 100%;
+  padding: 0;
+  margin: 0;
 }

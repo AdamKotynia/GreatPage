@@ -1,0 +1,6 @@
+<div class="suggest">
+    <h1>Suggested Products</h1>
+    <div class="suggestion" ng-repeat="product in pros.products | limitTo:4" ng-click="loadProduct(product.id)">
+        <img src="{{product.img}}" alt=""/>
+    </div>
+</div>
