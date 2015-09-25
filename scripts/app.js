@@ -26,6 +26,10 @@
                 templateUrl: 'form.html',
                 controller: ''
             })
+            .when('/admin', {
+                templateUrl: 'admin-panel.html',
+                controller: ''
+            })
 
     });
 
@@ -33,8 +37,8 @@
         return {
             restrict: 'E',
             templateUrl: 'main-content.html',
-            controller: function () {
-                this.categories = categories;
+            controller: function ($scope) {
+                this.categories = $scope.team.data;
             },
             controllerAs: 'store'
         };
@@ -73,8 +77,8 @@
         return {
             restrict: 'E',
             templateUrl: 'categories.html',
-            controller: function() {
-                this.categories = categories
+            controller: function ($scope) {
+                this.categories = $scope.team.data;
             },
             controllerAs: 'cat'
         };
@@ -110,7 +114,7 @@
         }
     });
 
-    app.controller('ShopController', ['$scope', function($scope) {
+    app.controller('ShopController', ['$scope', 'DataService', function($scope, DataService) {
         $scope.products = products;
         $scope.count = 0;
         $scope.image = products[0].img;
@@ -118,6 +122,13 @@
         $scope.name = products[0].name;
         $scope.id = 0;
         $scope.total = 0;
+
+
+        var promise = DataService.getProds();
+        promise.then(function(data){
+            $scope.team = data;
+            console.log($scope.team)
+        });
 
         $scope.addToCart = function(currentId) {
             $scope.count += 1;
@@ -164,6 +175,9 @@
                         alert("Success!");
                         usrname = element.imie;
                         LogService.setName(usrname);
+                        if (element.login == 'x' && element.haslo == 'x') {
+                            $scope.admin = true;
+                        }
                     }
                 });
                 if (!isLogged)
@@ -178,15 +192,20 @@
                 $scope.products.forEach(function(product) {
                     product.quantity = 0;
                 });
+                $scope.admin = false;
             };
 
             $scope.isLoggedIn = function(){
                 return (!LogService.ifLogged());
             };
-
-
         }
     );
+
+    app.controller('AddController', function($scope, $http) {
+        $scope.adding = function() {
+            $http.post()
+        };
+    });
 
     app.service('LogService', function() {
 
@@ -218,39 +237,17 @@
         }
     });
 
-    var categories = [
-        {
-            name: 'Lorem',
-            img: 'images/content.jpg',
-            link: '#/category'
-        },
-        {
-            name: 'Lorem',
-            img: 'images/content.jpg',
-            link: '#/category'
-        },
-        {
-            name: 'Lorem',
-            img: 'images/content.jpg',
-            link: '#/category'
-        },
-        {
-            name: 'Lorem',
-            img: 'images/content.jpg',
-            link: '#/category'
-        },
-        {
-            name: 'Lorem',
-            img: 'images/content.jpg',
-            link: '#/category'
-        },
-        {
-            name: 'Lorem',
-            img: 'images/content.jpg',
-            link: '#/category'
-        }
+    app.service('DataService', function($http, $q){
+        var categori =  $q.defer();
 
-    ];
+        $http.get("scripts/json/package.json").then(function(data){
+            categori.resolve(data);
+        });
+
+        this.getProds = function(){
+            return categori.promise;
+        }
+    });
 
     var navigation = [
         {
@@ -268,6 +265,10 @@
         {
             name: 'Product Cart',
             link: '#/cart'
+        },
+        {
+            name: 'Admin Panel',
+            link: '#/admin'
         }
     ];
 

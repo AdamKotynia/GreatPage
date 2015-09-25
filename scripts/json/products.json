@@ -1,0 +1,50 @@
+[
+  {
+    "id": "0",
+    "name": "lorem1",
+    "description": "lorem ipsum1",
+    "price": 20,
+    "img": "images/content.jpg",
+    "quantity": 0
+  },
+  {
+    "id": "1",
+    "name": "lorem2",
+    "description": "lorem ipsum2",
+    "price": 21,
+    "img": "images/content1.jpg",
+    "quantity": 0
+  },
+  {
+    "id": "2",
+    "name": "lorem3",
+    "description": "lorem ipsum3",
+    "price": 22,
+    "img": "images/content2.jpg",
+    "quantity": 0
+  },
+  {
+    "id": "3",
+    "name": "lorem4",
+    "description": "lorem ipsum4",
+    "price": 23,
+    "img": "images/content3.jpg",
+    "quantity": 0
+  },
+  {
+    "id": "4",
+    "name": "lorem5",
+    "description": "lorem ipsum5",
+    "price": 24,
+    "img": "images/content4.jpg",
+    "quantity": 0
+  },
+  {
+    "id": "5",
+    "name": "lorem6",
+    "description": "lorem ipsum6",
+    "price": 25,
+    "img": "images/content5.jpg",
+    "quantity": 0
+  }
+]
