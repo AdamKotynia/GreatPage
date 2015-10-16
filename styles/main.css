@@ -1,6 +1,6 @@
 .navbar {
   height: 30px;
-  padding: 5px 0px 0px 50px;
+  padding: 5px 0 0 50px;
   background-color: #242424;
   width: 100%;
   color: beige;
@@ -162,6 +162,57 @@ input[type="submit"] {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+}
+.browser {
+  background-color: grey;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  display: inline-table;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.browser a {
+  text-decoration: none;
+  color: black;
+}
+.browser a:hover {
+  color: beige;
+}
+.browser .inner_browser {
+  width: 100%;
+}
+.browser .inner_browser input {
+  width: 60%;
+}
+.browser .result {
+  width: 100%;
+}
+.browser .result .resultimg {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  margin: 10px;
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  border: 1px solid grey;
+}
+.browser .result .resultimg img {
+  position: absolute;
+  left: -100%;
+  right: -100%;
+  top: -100%;
+  bottom: -100%;
+  margin: auto;
+  min-height: 100%;
+  min-width: 100%;
+}
+.browser .result .pages-container {
+  width: 100%;
+}
+.browser .result .pages-container .pages {
+  display: inline-block;
 }
 .category {
   width: 25%;

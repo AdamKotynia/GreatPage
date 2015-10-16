@@ -30,6 +30,9 @@
                 templateUrl: 'admin-panel.html',
                 controller: ''
             })
+            .when('/search', {
+                templateUrl: 'search.html'
+            })
 
     });
 
@@ -59,7 +62,7 @@
         return {
             restrict: 'E',
             templateUrl: 'footery.html'
-       };
+        };
     });
 
     app.directive('categoryProducts', function() {
@@ -114,7 +117,7 @@
         }
     });
 
-    app.controller('ShopController', ['$scope', 'DataService', function($scope, DataService) {
+    app.controller('ShopController', ['$scope', 'DataService', function($scope, DataService, $http) {
         $scope.products = products;
         $scope.count = 0;
         $scope.image = products[0].img;
@@ -122,7 +125,20 @@
         $scope.name = products[0].name;
         $scope.id = 0;
         $scope.total = 0;
+        $scope.id1 = function() {
+            var i = 0;
+            $scope.products.forEach(function(){
+                i += 1
+            });
+            return i;
+        };
 
+        $scope.addProduct = function() {
+            $http.post("https://demo8644811.mockable.io/cyc", {
+                "id": $scope.id1, "name": $scope.name1, "description": $scope.description1,
+                "price": $scope.price1, "img": $scope.img1, "quantity": 0
+            });
+        };
 
         var promise = DataService.getProds();
         promise.then(function(data){
@@ -201,12 +217,6 @@
         }
     );
 
-    app.controller('AddController', function($scope, $http) {
-        $scope.adding = function() {
-            $http.post()
-        };
-    });
-
     app.service('LogService', function() {
 
         var isInside = false;
@@ -237,6 +247,20 @@
         }
     });
 
+    app.controller('searchController', function($scope, $http){
+        $scope.pgnumbers = [1, 11, 21, 31, 41, 51, 61, 71, 81, 91];
+        $scope.results = [];
+
+        $scope.getResults = function(pgnumber){
+            var url = 'https://www.googleapis.com/customsearch/v1?' +
+                'googlehost=google.co.uk&safe=medium&searchType=image&start='+pgnumber+'&' +
+                'key=AIzaSyCwA35ibvlnqrIbjGQepRtBVWJNHB3hMdA&cx=010146182105979843094:z2dcm8ayrqu&q=';
+            $http.get(url + $scope.search_key + "'").success(function(data){
+                $scope.results = data.items;
+            })
+        };
+    });
+
     app.service('DataService', function($http, $q){
         var categori =  $q.defer();
 
@@ -246,7 +270,9 @@
 
         this.getProds = function(){
             return categori.promise;
-        }
+        };
+
+
     });
 
     var navigation = [
@@ -269,6 +295,10 @@
         {
             name: 'Admin Panel',
             link: '#/admin'
+        },
+        {
+            name: 'Search',
+            link: '#/search'
         }
     ];
 

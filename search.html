@@ -1,0 +1,17 @@
+<section class="browser" ng-controller="searchController">
+    <div class="inner_browser">
+        Enter the phrase:
+        <input type="text" id="search_key" ng-model="search_key">
+        <button type="submit" ng-click="getResults(1)">Search</button>
+    </div>
+    <ul class="result">
+        <li class="resultimg" ng-repeat="item in results">
+            <img ng-src="{{item.link}}">
+        </li>
+        <div class="pages-container">
+            <li class="pages" ng-repeat="nr in pgnumbers">
+                <button class="pagenumber" ng-click="getResults(nr)">{{(((nr-1)/10)+1)}}</button>
+            </li>
+        </div>
+    </ul>
+</section>

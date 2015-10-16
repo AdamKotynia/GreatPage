@@ -16,4 +16,3 @@ $(window).ready(function() {
         $("#large_photo_image").attr("src", "images/content1.jpg");
     })
 });
-
