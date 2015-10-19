@@ -9,8 +9,8 @@
             <img ng-src="{{item.link}}">
         </li>
         <div class="pages-container">
-            <li class="pages" ng-repeat="nr in pgnumbers">
-                <button class="pagenumber" ng-click="getResults(nr)">{{(((nr-1)/10)+1)}}</button>
+            <li class="pages" ng-repeat="nr in pagenumbers">
+                <button class="pagenumber" ng-click="getResultsWithNumber(nr)">{{nr}}</button>
             </li>
         </div>
     </ul>

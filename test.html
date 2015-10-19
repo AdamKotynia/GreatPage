@@ -6,30 +6,31 @@
     <title>Hello World - Google  Web Search API Sample</title>
     <script src="https://www.google.com/jsapi"
             type="text/javascript"></script>
-    <script language="Javascript" type="text/javascript">
-        //<!
-        google.load('search', '1');
-
-        function OnLoad() {
-            // Create a search control
-            var searchControl = new google.search.SearchControl();
-
-            // Add in a full set of searchers
-            var localSearch = new google.search.LocalSearch();
-              searchControl.addSearcher(new google.search.ImageSearch());
-
-            // tell the searcher to draw itself and tell it where to attach
-            var drawOptions = new google.search.DrawOptions();
-            drawOptions.setDrawMode(google.search.SearchControl.DRAW_MODE_TABBED);
-            searchControl.draw(document.getElementById("searchcontrol"));
-
-        }
-        google.setOnLoadCallback(OnLoad);
-
-        //]]>
+    <script>
+        (function() {
+            var cx = 'YOUR_ENGINE_ID';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                    '//cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
     </script>
+
+
 </head>
 <body>
-<div id="searchcontrol">Loading</div>
+<gcse:searchresults-only></gcse:searchresults-only>
+<div class="sidebar">
+Area 1 (for example a sidebar)
+<gcse:searchbox></gcse:searchbox>
+</div>
+
+<div class="main-content">
+    Area 2 (for example main area of the page)
+    <gcse:searchresults></gcse:searchresults>
+</div>
 </body>
 </html>

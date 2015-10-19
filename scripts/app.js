@@ -143,7 +143,6 @@
         var promise = DataService.getProds();
         promise.then(function(data){
             $scope.team = data;
-            console.log($scope.team)
         });
 
         $scope.addToCart = function(currentId) {
@@ -248,13 +247,22 @@
     });
 
     app.controller('searchController', function($scope, $http){
-        $scope.pgnumbers = [1, 11, 21, 31, 41, 51, 61, 71, 81, 91];
         $scope.results = [];
+        $scope.numbers = [1, 11, 21, 31, 41, 51, 61, 71, 81, 91];
+        $scope.pagenumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-        $scope.getResults = function(pgnumber){
-            var url = 'https://www.googleapis.com/customsearch/v1?' +
-                'googlehost=google.co.uk&safe=medium&searchType=image&start='+pgnumber+'&' +
-                'key=AIzaSyCwA35ibvlnqrIbjGQepRtBVWJNHB3hMdA&cx=010146182105979843094:z2dcm8ayrqu&q=';
+        $scope.getResults = function(numbers){
+            var url = 'https://www.googleapis.com/customsearch/v1?googlehost=google.co.uk&safe=medium&searchType=image&start=' + numbers + '&key=AIzaSyBDq0p1Efken7q2pStpmhCOe2Y0IJdhA9M&cx=016499236153718938753:2qvcquanws0&q=';
+            $http.get(url + $scope.search_key + "'").success(function(data){
+                $scope.results = data.items;
+            })
+        };
+        $scope.getResultsWithNumber = function(nr) {
+            var a = 0;
+            for (var i = 0; i < $scope.pagenumbers.length; i++) {
+                if (i == nr) a = i;
+            };
+            var url = 'https://www.googleapis.com/customsearch/v1?googlehost=google.co.uk&safe=medium&searchType=image&start=' + $scope.numbers[a] + '&key=AIzaSyBDq0p1Efken7q2pStpmhCOe2Y0IJdhA9M&cx=016499236153718938753:2qvcquanws0&q=';
             $http.get(url + $scope.search_key + "'").success(function(data){
                 $scope.results = data.items;
             })
