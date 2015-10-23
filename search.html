@@ -5,8 +5,8 @@
         <button type="submit" ng-click="getResults(1)">Search</button>
     </div>
     <ul class="result">
-        <li class="resultimg" ng-repeat="item in results">
-            <img ng-src="{{item.link}}">
+        <li class="image" ng-repeat="item in results | limitTo:8" ng-click="window.open()">
+            <img class="image" ng-src="{{item.link}}">
         </li>
         <div class="pages-container">
             <li class="pages" ng-repeat="nr in pagenumbers">

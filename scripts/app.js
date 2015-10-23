@@ -172,6 +172,10 @@
                 $scope.total += product.quantity * product.price;
             });
         };
+
+        $scope.openNew = function() {
+            window.open("images/content.jpg", "", "width=500, height=500");
+        };
     }]);
 
     app.controller('LoginController',function ($scope, $rootScope,  LogService) {
@@ -267,6 +271,8 @@
                 $scope.results = data.items;
             })
         };
+
+
     });
 
     app.service('DataService', function($http, $q){

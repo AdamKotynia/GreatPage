@@ -19,6 +19,9 @@
   width: 80%;
   height: 80%;
 }
+.large_photo img:hover {
+  opacity: 0.5;
+}
 .small_photo1 {
   width: 110px;
   height: 110px;
@@ -125,6 +128,12 @@
   width: 100%;
 }
 .butn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
 @keyframes slide {
